@@ -35,20 +35,7 @@ public abstract class Actor extends ImageView{
         return someArray;
     }
     
-    //public void manageInput(InputEvent e) {		this looks useless
-        
-    //}
-
-    /*public <A extends Actor> A getOneIntersectingObject(java.lang.Class<A> cls) {	//look above
-        ArrayList<A> someArray = new ArrayList<A>();
-        for (A actor: getWorld().getObjects(cls)) {
-            if (actor != this && actor.intersects(this.getBoundsInLocal())) {
-                someArray.add(actor);
-                break;
-            }
-        }
-        return someArray.get(0);
-    }*/
+    //remove manageInput bc unused
 
     public abstract void act(long now);
     

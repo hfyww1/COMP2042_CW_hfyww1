@@ -105,7 +105,7 @@ public class Main extends Application {
 						
 						background.start();
 						
-						lebel = new Level(270, 750, 100);
+						lebel = new Level();
 				    	background.add(lebel);
 				    	
 				    	clock = new Tiktok(40, 175);
@@ -231,16 +231,16 @@ public class Main extends Application {
         timer.stop();
     }
     
+    //write a score.txt in package
     private void write(int newScore) throws IOException {	//write score into file
  	   File output = new File("src/p4_group_8_repo/scores.txt");
  	   FileWriter filewriter = new FileWriter(output);
  	   PrintWriter printwriter = new PrintWriter(filewriter);
- 	   
  	   printwriter.printf("%d", newScore);
  	   printwriter.close();
     }
     
-    //read HighScore from scores.txt file
+   //read highscore from score.txt and compare to current player to save
     private void read() throws IOException {
  	   int i, g = 2, space = 30;
  	   try (FileReader hs = new FileReader("src/p4_group_8_repo/scores.txt")) {	//high score
@@ -257,7 +257,7 @@ public class Main extends Application {
  		   System.out.println("Error: cannot find .txt file");
  		   background.add(new Digit(0, 30, space+20, 45));
  	   }
-    }//END of read method
+    }
     
     public void setNumber(int n) {
     	int shift = 0;

@@ -21,16 +21,14 @@ public class Animal extends Actor {
 	int points = 0;
 	int end = 0;
 	private boolean second = false; //flips between jumping and non jumping pic
-	boolean noMove = false; //tf is this
-	double movement = 26.6666666; //13.3333333*2; //movement y?
+	boolean noMove = false;
+	double movement = 26.6666666; //13.3333333*2;
 	double movementX = 21.333332; //10.666666*2;
 	int imgSize = 40;
 	boolean carDeath = false;
 	boolean waterDeath = false;
-	//boolean stop = false;
 	boolean changeScore = false;
 	int df = 0; //change variable name from carD to understand image flip count
-	//df = death flip to flip images
 	double w = 800; //score limit
 	ArrayList<End> inter = new ArrayList<End>();
 	public Animal() {
@@ -54,68 +52,37 @@ public class Animal extends Actor {
 			                move(0, -movement);
 			                changeScore = false;
 			                setImage(imgW1);
-			                //second = false;
 			            }
 			            else if (g == KeyCode.A) {	            	
 			            	 move(-movementX, 0);
 			            	 setImage(imgA1);
-			            	 //second = false;
 			            }
 			            else if (g == KeyCode.S) {	            	
 			            	 move(0, movement);
 			            	 setImage(imgS1);
-			            	 //second = false;
 			            }
 			            else if (g == KeyCode.D) {	            	
 			            	 move(movementX, 0);
 			            	 setImage(imgD1);
-			            	 //second = false;
 			            }
 						second = false;	//move second outside embedded if else
-						/*switch(event.getCode()) {			HOW DO I MAKE THIS A SWITCH STATEMENT BABIIIIII
-							case KeyCode.W:
-								move(0, -movement);
-				                changeScore = false;	//why needed?
-				                setImage(imgW1);
-				                second = false;
-				                break;
-							case KeyCode.A:
-								move(-movementX, 0);
-				            	setImage(imgA1);
-				            	second = false;
-				            	break;
-							case KeyCode.S:
-								move(0, movement);
-				            	setImage(imgS1);
-				            	second = false;
-				            	break;
-							case KeyCode.D:
-								move(0, movement);
-				            	setImage(imgD1);
-				            	second = false;
-				            	break;
-						}*/
 					}
 					else {
 						if (g == KeyCode.W) {	            	
 			                move(0, -movement);
 			                setImage(imgW2);
-			                //second = true;
 			            }
 			            else if (g == KeyCode.A) {	            	
 			            	 move(-movementX, 0);
 			            	 setImage(imgA2);
-			            	 //second = true;
 			            }
 			            else if (g == KeyCode.S) {	            	
 			            	 move(0, movement);
 			            	 setImage(imgS2);
-			            	 //second = true;
 			            }
 			            else if (g == KeyCode.D) {	            	
 			            	 move(movementX, 0);
 			            	 setImage(imgD2);
-			            	 //second = true;
 			            }
 						second = true;	//move second outside embedded if else
 					}
@@ -128,30 +95,26 @@ public class Animal extends Actor {
 				KeyCode g = event.getCode();	//released key
 				if (!noMove) {
 					if (g == KeyCode.W) {	  
-						if (getY() < w) {	//W is highest score
+						if (getY() < w) {	//w is highest score
 							changeScore = true;
 							w = getY();
 							points+=10;
 						}
 		                move(0, -movement);
 		                setImage(imgW1);
-		                //second = false;
 		            }
 		            else if (g == KeyCode.A) {	            	
 		            	 move(-movementX, 0);
 		            	 setImage(imgA1);
-		            	 //second = false;
 		            }
 		            else if (g == KeyCode.S) {	            	
 		            	 move(0, movement);
 		            	 setImage(imgS1);
-		            	 //second = false;
 		            }
 		            else if (g == KeyCode.D) {	            	
 		            	 move(movementX, 0);
 		            	 setImage(imgD1);
-		            	 //second = false;
-		            second = false;	//move second outside embedded if else
+		            	 second = false;
 		            }
 				} //if no move end curly
 			}
@@ -161,7 +124,6 @@ public class Animal extends Actor {
 	
 	@Override
 	public void act(long now) {
-		//int bounds = 0;
 		if (getY()<0 || getY()>734) {
 			setX(300);
 			setY(679.8+movement);
@@ -174,7 +136,6 @@ public class Animal extends Actor {
 			if ((now)% 11 == 0) {
 				df++;
 			}
-			//new from here
 			switch(df){	//set switch case
 				case 1:
 					setImage(new Image("file:src/media/cardeath1.png", imgSize, imgSize, true, true));
@@ -198,28 +159,6 @@ public class Animal extends Actor {
 					}
 					break;
 			}
-			/*if (df==1) {
-				setImage(new Image("file:src/p4_group_8_repo/cardeath1.png", imgSize, imgSize, true, true));
-			}
-			if (df==2) {
-				setImage(new Image("file:src/p4_group_8_repo/cardeath2.png", imgSize, imgSize, true, true));
-			}
-			if (df==3) {
-				setImage(new Image("file:src/p4_group_8_repo/cardeath3.png", imgSize, imgSize, true, true));
-			}
-			if (df == 4) {
-				setX(300);
-				setY(679.8+movement);
-				carDeath = false;
-				df = 0;
-				setImage(new Image("file:src/p4_group_8_repo/froggerUp.png", imgSize, imgSize, true, true));
-				noMove = false;
-				if (points>50) {
-					points-=50;
-					changeScore = true;
-				}
-			}*/
-			
 		}
 		if (waterDeath) {
 			noMove = true;
@@ -253,31 +192,6 @@ public class Animal extends Actor {
 					break;
 					
 			}
-			/*if (df==1) {
-				setImage(new Image("file:src/p4_group_8_repo/waterdeath1.png", imgSize,imgSize , true, true));
-			}
-			if (df==2) {
-				setImage(new Image("file:src/p4_group_8_repo/waterdeath2.png", imgSize,imgSize , true, true));
-			}
-			if (df==3) {
-				setImage(new Image("file:src/p4_group_8_repo/waterdeath3.png", imgSize,imgSize , true, true));
-			}
-			if (df == 4) {
-				setImage(new Image("file:src/p4_group_8_repo/waterdeath4.png", imgSize,imgSize , true, true));
-			}
-			if (df == 5) {
-				setX(300);
-				setY(679.8+movement);
-				waterDeath = false;
-				df = 0;
-				setImage(new Image("file:src/p4_group_8_repo/froggerUp.png", imgSize, imgSize, true, true));
-				noMove = false;
-				if (points>50) {
-					points-=50;
-					changeScore = true;
-				}
-			}*/
-			
 		}
 		
 		if (getX()>600) {
@@ -288,10 +202,7 @@ public class Animal extends Actor {
 		if (getIntersectingObjects(Obstacle.class).size() >= 1) { //touching snake gives car death
 			carDeath = true;
 		}
-		//if (getX() == 240 && getY() == 82) {
-			//stop = true;
-		//}
-		
+		//remove useless if
 		if (getIntersectingObjects(Log.class).size() >= 1 && !noMove) {
 			if(getIntersectingObjects(Log.class).get(0).getLeft())
 				move(-2,0);
@@ -324,17 +235,16 @@ public class Animal extends Actor {
 		}
 		else if (getY()<413){
 			waterDeath = true;
-			//setX(300);
-			//setY(679.8+movement);
+			//no need to set positions, already declared
 		}
 	}
 	public boolean getStop() {	//end = how many end spots are filled
 		return end==5;
 	}
-	public int upgrade() {	//was level
+	
+	public int upgrade() {	//called by main to know when to level up
 		return end;
 	}
-	
 	
 	public int getPoints() {
 		return points;
@@ -346,7 +256,6 @@ public class Animal extends Actor {
 			return true;
 		}
 		return false;
-		
 	}
 	
 

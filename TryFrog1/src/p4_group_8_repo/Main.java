@@ -16,7 +16,11 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
-
+/**
+ * This is the main class that compiles all of the classes together
+ * @author Monisha
+ *
+ */
 public class Main extends Application {
 	AnimationTimer timer, ticktock; //timer makes sure everything follows each other, ticktock is for round time
 	MyStage start, background, music; //start

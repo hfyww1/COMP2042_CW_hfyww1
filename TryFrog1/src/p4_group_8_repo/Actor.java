@@ -1,10 +1,18 @@
 package p4_group_8_repo;
 
 import javafx.scene.image.ImageView;
-//import javafx.scene.input.InputEvent;
-
 import java.util.ArrayList;
 
+/**
+* <h1>Actor Class</h1>
+* This class is used to set a constant style for the actors in frogger
+* This follows for vehicles, animals, logs
+* This is called in main to show the different actors and make them move and interact
+* <p>
+* 
+* @author  Wan Hanna Monisha binti Wan Nurnizam
+* @since   2020-12-18
+*/
 
 public abstract class Actor extends ImageView{
 

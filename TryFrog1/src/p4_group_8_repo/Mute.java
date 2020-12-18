@@ -8,14 +8,12 @@ public class Mute extends Actor {
 	//MyStage background;
 	//boolean changeMute = false;
 	
-	public Mute(String imageLink, int size, int xpos, int ypos, int s) {
-		setImage(new Image(imageLink, size, size, true, true));
-		setX(xpos);
-		setY(ypos);
-		
+	public Mute(int size, int xpos, int ypos) {
 		mute = new Image("file:src/media/mute.png", 40, 40, true, true);
 		unmute = new Image("file:src/media/unmute.png", 40, 40, true, true);
-		
+		setImage(unmute);
+		setX(xpos);
+		setY(ypos);
 	}
 	
 	public void picMute() {

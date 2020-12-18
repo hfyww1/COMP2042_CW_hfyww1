@@ -104,7 +104,7 @@ public class Main extends Application {
 						
 						fastcar = new Obstacle("file:src/media/car1Left.png", 0, 490, -5, 50);
 						background.add(fastcar);
-						background.add(new Digit(0, 30, 550, 25)); //change third digit to move score away from title, adjusted in 139
+						background.add(new Digit(0, 30, 550, 45)); //change third digit to move score away from title, adjusted in 139
 						
 						animal = new Animal("file:src/media/froggerUp.png");	//CAN RENAME THIS?
 						background.add(animal);
@@ -114,16 +114,16 @@ public class Main extends Application {
 						lebel = new Level(270, 750, 100);
 				    	background.add(lebel);
 				    	
-				    	clock = new Tiktok(40, 225, 20);
+				    	clock = new Tiktok(40, 175, 20);
 				    	background.add(clock);
 				    	
-				    	colon = new Tiktok1(10, 40, 315, 20);
+				    	colon = new Tiktok1(10, 40, 265, 20);
 						background.add(colon);
-						sec0 = new Tiktok1(0, 40, 390, 20);
+						sec0 = new Tiktok1(0, 40, 340, 20);
 						background.add(sec0);
-						sec1 = new Tiktok1(0, 40, 350, 20);
+						sec1 = new Tiktok1(0, 40, 300, 20);
 						background.add(sec1);
-						min0 = new Tiktok1(0, 40, 285, 20);
+						min0 = new Tiktok1(0, 40, 235, 20);
 						background.add(min0);
 						
 						createTicktock();
@@ -133,7 +133,7 @@ public class Main extends Application {
 						primaryStage.show();
 						
 						background.playMusic();
-						unmute = new Mute("file:src/media/unmute.png", 40, 450, 25, 150);
+						unmute = new Mute(40, 390, 25);
 						background.add(unmute);
 						
 						try {
@@ -248,18 +248,20 @@ public class Main extends Application {
     
     //read HighScore from scores.txt file
     private void read() throws IOException {
- 	   int i, g = 2;
+ 	   int i, g = 2, space = 30;
  	   try (FileReader hs = new FileReader("src/p4_group_8_repo/scores.txt")) {	//high score
  		   while ((i = hs.read()) != -1) {
  			   int char2int = (char)i - '0';	//change to integer
- 			   background.add(new Digit(char2int, 30, 50, 25));
+ 			   System.out.println((char)i);
+ 			   background.add(new Digit(char2int, 30, space, 45));
  			   compareScore = (Math.pow(10, g)) * char2int;
  			   g--;	//sets single unit, tens unit, hundreds
+ 			   space = space+30;	//this prints in the units next to each other
  		   }
  	   }
  	   catch(IOException e) {
- 		   System.out.println("no file");
- 		   background.add(new Digit(0, 166, 30, 30));
+ 		   System.out.println("Error: cannot find .txt file");
+ 		   background.add(new Digit(0, 30, space+20, 45));
  	   }
     }//END of read method
     
@@ -269,7 +271,7 @@ public class Main extends Application {
     		  int d = n / 10;
     		  int k = n - d * 10;
     		  n = d;
-    		  background.add(new Digit(k, 30, 550 - shift, 25));
+    		  background.add(new Digit(k, 30, 550 - shift, 45));
     		  shift+=30;
     		}
     }
@@ -280,10 +282,10 @@ public class Main extends Application {
     		  k = n - d * 10;
     		  n = d;
     		  background.remove(sec0);
-    		  sec0 = new Tiktok1(k, 40, 390, 20);	//seconds in 1 unit
+    		  sec0 = new Tiktok1(k, 40, 340, 20);	//seconds in 1 unit
     		  background.add(sec0);
     		  background.remove(sec1);
-    		  sec1 = new Tiktok1(n, 40, 350, 20);	//seconds in 10 unit
+    		  sec1 = new Tiktok1(n, 40, 300, 20);	//seconds in 10 unit
     		  background.add(sec1);
     	}
     }

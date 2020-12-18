@@ -44,7 +44,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		    start = new MyStage();
 		    Scene menu  = new Scene(start,600,800);
-		    Menu froggerStart = new Menu("file:src/p4_group_8_repo/StartScreen.png"); //add background
+		    Menu froggerStart = new Menu("file:src/media/StartScreen.png"); //add background
 			start.add(froggerStart);
 			primaryStage.setScene(menu);
 			primaryStage.show();
@@ -57,7 +57,7 @@ public class Main extends Application {
 						background = new MyStage();
 					    Scene scene  = new Scene(background,600,800);
 					    
-						BackgroundImage froggerback = new BackgroundImage("file:src/p4_group_8_repo/iKogsKW.png"); //add background
+						BackgroundImage froggerback = new BackgroundImage("file:src/media/iKogsKW.png"); //add background
 						background.add(froggerback);	//CAN RENAME THIS?
 						
 						background.add(new End(13,96));
@@ -67,19 +67,19 @@ public class Main extends Application {
 						background.add(new End(528,96));
 						
 						//top logs
-						background.add(new Log("file:src/p4_group_8_repo/log3.png", 150, 0, 166, 0.75));
-						background.add(new Log("file:src/p4_group_8_repo/log3.png", 150, 220, 166, 0.75));
-						background.add(new Log("file:src/p4_group_8_repo/log3.png", 150, 440, 166, 0.75));
+						background.add(new Log("file:src/media/log3.png", 150, 0, 166, 0.75));
+						background.add(new Log("file:src/media/log3.png", 150, 220, 166, 0.75));
+						background.add(new Log("file:src/media/log3.png", 150, 440, 166, 0.75));
 
 						//mid logs
-						background.add(new Log("file:src/p4_group_8_repo/logs.png", 300, 0, 276, -2));
-						background.add(new Log("file:src/p4_group_8_repo/logs.png", 300, 400, 276, -2));
+						background.add(new Log("file:src/media/logs.png", 300, 0, 276, -2));
+						background.add(new Log("file:src/media/logs.png", 300, 400, 276, -2));
 
 						//bottom logs
-						botlog = new Log("file:src/p4_group_8_repo/log3.png", 150, 50, 329, 0.75);
+						botlog = new Log("file:src/media/log3.png", 150, 50, 329, 0.75);
 						background.add(botlog);
-						background.add(new Log("file:src/p4_group_8_repo/log3.png", 150, 270, 329, 0.75));
-						background.add(new Log("file:src/p4_group_8_repo/log3.png", 150, 490, 329, 0.75));
+						background.add(new Log("file:src/media/log3.png", 150, 270, 329, 0.75));
+						background.add(new Log("file:src/media/log3.png", 150, 490, 329, 0.75));
 						
 							
 						//width and height are the same, remove one variable
@@ -92,21 +92,21 @@ public class Main extends Application {
 						background.add(new WetTurtle(200, 217, -1, 130));
 						
 						//width and height are the same, remove one variable
-						background.add(new Obstacle("file:src/p4_group_8_repo/truck1Right.png", 0, 649, 1, 120)); //remove redundant string
-						background.add(new Obstacle("file:src/p4_group_8_repo/truck1Right.png", 300, 649, 1, 120));
-						background.add(new Obstacle("file:src/p4_group_8_repo/truck1Right.png", 600, 649, 1, 120));
-						background.add(new Obstacle("file:src/p4_group_8_repo/car1Left.png", 100, 597, -1, 50));
-						background.add(new Obstacle("file:src/p4_group_8_repo/car1Left.png", 250, 597, -1, 50));
-						background.add(new Obstacle("file:src/p4_group_8_repo/car1Left.png", 400, 597, -1, 50));
-						background.add(new Obstacle("file:src/p4_group_8_repo/car1Left.png", 550, 597, -1, 50));
-						background.add(new Obstacle("file:src/p4_group_8_repo/truck2Right.png", 0, 540, 1, 200));
-						background.add(new Obstacle("file:src/p4_group_8_repo/truck2Right.png", 500, 540, 1, 200));
+						background.add(new Obstacle("file:src/media/truck1Right.png", 0, 649, 1, 120)); //remove redundant string
+						background.add(new Obstacle("file:src/media/truck1Right.png", 300, 649, 1, 120));
+						background.add(new Obstacle("file:src/media/truck1Right.png", 600, 649, 1, 120));
+						background.add(new Obstacle("file:src/media/car1Left.png", 100, 597, -1, 50));
+						background.add(new Obstacle("file:src/media/car1Left.png", 250, 597, -1, 50));
+						background.add(new Obstacle("file:src/media/car1Left.png", 400, 597, -1, 50));
+						background.add(new Obstacle("file:src/media/car1Left.png", 550, 597, -1, 50));
+						background.add(new Obstacle("file:src/media/truck2Right.png", 0, 540, 1, 200));
+						background.add(new Obstacle("file:src/media/truck2Right.png", 500, 540, 1, 200));
 						
-						fastcar = new Obstacle("file:src/p4_group_8_repo/car1Left.png", 0, 490, -5, 50);
+						fastcar = new Obstacle("file:src/media/car1Left.png", 0, 490, -5, 50);
 						background.add(fastcar);
 						background.add(new Digit(0, 30, 550, 25)); //change third digit to move score away from title, adjusted in 139
 						
-						animal = new Animal("file:src/p4_group_8_repo/froggerUp.png");	//CAN RENAME THIS?
+						animal = new Animal("file:src/media/froggerUp.png");	//CAN RENAME THIS?
 						background.add(animal);
 						
 						background.start();
@@ -133,7 +133,7 @@ public class Main extends Application {
 						primaryStage.show();
 						
 						background.playMusic();
-						unmute = new Mute("file:src/p4_group_8_repo/unmute.png", 40, 450, 25, 150);
+						unmute = new Mute("file:src/media/unmute.png", 40, 450, 25, 150);
 						background.add(unmute);
 						
 						try {
@@ -190,7 +190,7 @@ public class Main extends Application {
             		setNumber(animal.getPoints());
             		if (animal.getPoints() > compareScore) {
             			try {
-    						writeScore(animal.getPoints());
+    						write(animal.getPoints());
     					} catch (IOException e) {
     						e.printStackTrace();
     					}
@@ -220,46 +220,41 @@ public class Main extends Application {
 	}
 	
 	public void stopwatch() {	//reset round timer
-		System.out.println("stopwatch()");
 		clock.tock();
     	ticktock.stop();
     	background.remove(clock);
     	background.add(clock);
     	ticktock.start();
-    	System.out.println("end stopwatch()");
 	}
 	
 	public void start() throws IOException{
     	createTimer();
         timer.start();
-        readScore();
+        read();
     }
 
     public void stop() {
         timer.stop();
     }
     
-    private void writeScore(int newScore) throws IOException {
-
- 	   File output = new File("C:\\Users\\Monisha\\Desktop\\Soft Maint\\cw\\scores.txt");
- 	   FileWriter writer = new FileWriter(output);
- 	   PrintWriter printWriter = new PrintWriter(writer);
+    private void write(int newScore) throws IOException {	//write score into file
+ 	   File output = new File("src/p4_group_8_repo/scores.txt");
+ 	   FileWriter filewriter = new FileWriter(output);
+ 	   PrintWriter printwriter = new PrintWriter(filewriter);
  	   
- 	   printWriter.printf("%d", newScore);
- 	   printWriter.close();
-    }//END of write method
+ 	   printwriter.printf("%d", newScore);
+ 	   printwriter.close();
+    }
     
     //read HighScore from scores.txt file
-     //make "compareScore" a global variable, compare and save "max" in WRITE
-    private void readScore() throws IOException {
- 	   int i, space = 0, power = 2;
- 	   try (FileReader hiscore = new FileReader("C:\\Users\\Monisha\\Desktop\\Soft Maint\\cw\\scores.txt")) {
- 		   while ((i = hiscore.read()) != -1) {
- 			   int char2int = (char)i - '0';
- 			   background.add(new Digit(char2int, 30, 30, 30));
- 			   space-=20;
- 			   compareScore = (Math.pow(10, power)) * char2int;
- 			   power--;
+    private void read() throws IOException {
+ 	   int i, g = 2;
+ 	   try (FileReader hs = new FileReader("src/p4_group_8_repo/scores.txt")) {	//high score
+ 		   while ((i = hs.read()) != -1) {
+ 			   int char2int = (char)i - '0';	//change to integer
+ 			   background.add(new Digit(char2int, 30, 50, 25));
+ 			   compareScore = (Math.pow(10, g)) * char2int;
+ 			   g--;	//sets single unit, tens unit, hundreds
  		   }
  	   }
  	   catch(IOException e) {
@@ -279,7 +274,7 @@ public class Main extends Application {
     		}
     }
     
-    public void setNumberClock(long n) {
+    public void setNumberClock(long n) {	//store time of previous round
     	if (n > 0) {
     		  long d = n / 10;
     		  k = n - d * 10;
@@ -299,7 +294,7 @@ public class Main extends Application {
     	stopwatch();
     	background.remove(fastcar);
     	background.remove(botlog);
-    	fastcar2 = new Obstacle("file:src/p4_group_8_repo/car2.png", 300, 490, -5, 50); //add new car
+    	fastcar2 = new Obstacle("file:src/media/car2.png", 300, 490, -5, 50); //add new car
     	background.add(fastcar);
     	background.add(fastcar2);
     }
@@ -309,11 +304,11 @@ public class Main extends Application {
     	stopwatch();
     	background.remove(fastcar);
     	background.remove(fastcar2);
-    	fastcar = new Obstacle("file:src/p4_group_8_repo/car1Left.png", 100, 490, -6, 50);
-    	fastcar2 = new Obstacle("file:src/p4_group_8_repo/car2.png", 300, 490, -6, 50);
+    	fastcar = new Obstacle("file:src/media/car1Left.png", 100, 490, -6, 50);
+    	fastcar2 = new Obstacle("file:src/media/car2.png", 300, 490, -6, 50);
     	background.add(fastcar);
 		background.add(fastcar2);
-		snake = new Snake("file:src/p4_group_8_repo/snake.png", 0, 440, -2, 50);
+		snake = new Snake("file:src/media/snake.png", 0, 440, -2, 50);
 		background.add(snake);
     }
     
@@ -322,7 +317,7 @@ public class Main extends Application {
     	stopwatch();
     	background.remove(fastcar);
     	background.remove(fastcar2);
-    	fastcar3 = new Obstacle("file:src/p4_group_8_repo/car2.png", 450, 490, -6, 50);
+    	fastcar3 = new Obstacle("file:src/media/car2.png", 450, 490, -6, 50);
     	background.add(fastcar);
 		background.add(fastcar2);
 		background.add(fastcar3);
@@ -333,7 +328,7 @@ public class Main extends Application {
     	lebel.incrA();
     	stopwatch();
     	background.remove(snake);
-    	snake1 = new Snake("file:src/p4_group_8_repo/snake.png", 300, 440, -2, 50);
+    	snake1 = new Snake("file:src/media/snake.png", 300, 440, -2, 50);
 		background.add(snake);
 		background.add(snake1);
     }

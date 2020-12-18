@@ -17,11 +17,11 @@ public class Level extends Actor {
 	
 	
 	public Level(int xpos, int ypos, int w) {
-		l1 = new Image("file:src/p4_group_8_repo/level1.png", w, w, true, true);
-		l2 = new Image("file:src/p4_group_8_repo/level2.png", w, w, true, true);
-		l3 = new Image("file:src/p4_group_8_repo/level3.png", w, w, true, true);
-		l4 = new Image("file:src/p4_group_8_repo/level4.png", w, w, true, true);
-		l5 = new Image("file:src/p4_group_8_repo/level5.png", w, w, true, true);
+		l1 = new Image("file:src/media/level1.png", w, w, true, true);
+		l2 = new Image("file:src/media/level2.png", w, w, true, true);
+		l3 = new Image("file:src/media/level3.png", w, w, true, true);
+		l4 = new Image("file:src/media/level4.png", w, w, true, true);
+		l5 = new Image("file:src/media/level5.png", w, w, true, true);
 		setImage(l1);
 		setX(xpos);
 		setY(ypos);
@@ -30,7 +30,6 @@ public class Level extends Actor {
 		
 	}
 	public void incrA() {
-		System.out.println("lebe.incra()");
 		a++;
 		switch(a) {
 		case 1:

@@ -12,7 +12,7 @@ public class Tiktok1 extends Actor{
 	}
 	
 	public Tiktok1(long n, int dim, int x, int y) {	//made because n needs to be long
-		im1 = new Image("file:src/p4_group_8_repo/"+n+".png", dim, dim, true, true);
+		im1 = new Image("file:src/media/"+n+".png", dim, dim, true, true);
 		setImage(im1);
 		setX(x);
 		setY(y);

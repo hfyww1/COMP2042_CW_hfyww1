@@ -13,8 +13,8 @@ public class Mute extends Actor {
 		setX(xpos);
 		setY(ypos);
 		
-		mute = new Image("file:src/p4_group_8_repo/mute.png", 40, 40, true, true);
-		unmute = new Image("file:src/p4_group_8_repo/unmute.png", 40, 40, true, true);
+		mute = new Image("file:src/media/mute.png", 40, 40, true, true);
+		unmute = new Image("file:src/media/unmute.png", 40, 40, true, true);
 		
 	}
 	

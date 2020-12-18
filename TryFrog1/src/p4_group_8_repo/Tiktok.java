@@ -10,12 +10,12 @@ public class Tiktok extends Actor{
 	public void act(long now) {
 		if(check == 0) {
 			temp = now;
-			System.out.printf("temp %d\n", temp);
+			System.out.printf("begun at %d\n", temp);
 			check++;
 		}
 		if(check == 2) {
 			temp1 = now;
-			System.out.printf("temp1 %d\n", temp1);
+			System.out.printf("ends at %d\n", temp1);
 			check++;
 		}
 		if(check == 3) {
@@ -27,7 +27,7 @@ public class Tiktok extends Actor{
 	}
 	
 	public Tiktok(int size, int xpos, int ypos) {
-		clock = new Image("file:src/p4_group_8_repo/clock.png", size, size, true, true);
+		clock = new Image("file:src/media/clock.png", size, size, true, true);
 		setImage(clock);
 		setX(xpos);
 		setY(ypos);
@@ -35,7 +35,7 @@ public class Tiktok extends Actor{
 	
 	public void tock() {
 		check = 2;
-		System.out.printf("tock check %d\n", temp);
+		//System.out.printf("tock check %d\n", temp);
 	}
 
 	public long give() {

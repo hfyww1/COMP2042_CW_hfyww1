@@ -1,13 +1,11 @@
 package p4_group_8_repo;
 
+//highscore file
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.io.IOException;	//for key press
-//import java.util.List;
+import java.io.IOException;
 import java.io.PrintWriter;
-
-//	import com.sun.glass.events.KeyEvent;	//for key press
 
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
@@ -17,11 +15,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-//import javafx.scene.media.Media;
-//import javafx.scene.media.MediaPlayer;
-//import javafx.scene.text.Text;
 import javafx.stage.Stage;
-//import javafx.util.Duration;
 
 public class Main extends Application {
 	AnimationTimer timer, ticktock; //timer makes sure everything follows each other, ticktock is for round time
@@ -44,11 +38,11 @@ public class Main extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		    start = new MyStage();
 		    Scene menu  = new Scene(start,600,800);
-		    Menu froggerStart = new Menu("file:src/media/StartScreen.png"); //add background
+		    Menu froggerStart = new Menu("file:src/media/StartScreen.png"); //add start screen background
 			start.add(froggerStart);
 			primaryStage.setScene(menu);
 			primaryStage.show();
-			primaryStage.setResizable(false);	//make sure the window doesnt move
+			primaryStage.setResizable(false);	//make sure the window doesnt move from set size
 			
 			start.setOnKeyReleased(new EventHandler<KeyEvent>() {
 				public void handle(KeyEvent event) {
@@ -58,7 +52,7 @@ public class Main extends Application {
 					    Scene scene  = new Scene(background,600,800);
 					    
 						BackgroundImage froggerback = new BackgroundImage("file:src/media/iKogsKW.png"); //add background
-						background.add(froggerback);	//CAN RENAME THIS?
+						background.add(froggerback);	
 						
 						background.add(new End(13,96));
 						background.add(new End(141,96));
@@ -106,7 +100,7 @@ public class Main extends Application {
 						background.add(fastcar);
 						background.add(new Digit(0, 30, 550, 45)); //change third digit to move score away from title, adjusted in 139
 						
-						animal = new Animal("file:src/media/froggerUp.png");	//CAN RENAME THIS?
+						animal = new Animal();
 						background.add(animal);
 						
 						background.start();
@@ -114,16 +108,16 @@ public class Main extends Application {
 						lebel = new Level(270, 750, 100);
 				    	background.add(lebel);
 				    	
-				    	clock = new Tiktok(40, 175, 20);
+				    	clock = new Tiktok(40, 175);
 				    	background.add(clock);
 				    	
-				    	colon = new Tiktok1(10, 40, 265, 20);
+				    	colon = new Tiktok1(10, 40, 265);
 						background.add(colon);
-						sec0 = new Tiktok1(0, 40, 340, 20);
+						sec0 = new Tiktok1(0, 40, 340);
 						background.add(sec0);
-						sec1 = new Tiktok1(0, 40, 300, 20);
+						sec1 = new Tiktok1(0, 40, 300);
 						background.add(sec1);
-						min0 = new Tiktok1(0, 40, 235, 20);
+						min0 = new Tiktok1(0, 40, 235);
 						background.add(min0);
 						
 						createTicktock();
@@ -282,10 +276,10 @@ public class Main extends Application {
     		  k = n - d * 10;
     		  n = d;
     		  background.remove(sec0);
-    		  sec0 = new Tiktok1(k, 40, 340, 20);	//seconds in 1 unit
+    		  sec0 = new Tiktok1(k, 40, 340);	//seconds in 1 unit
     		  background.add(sec0);
     		  background.remove(sec1);
-    		  sec1 = new Tiktok1(n, 40, 300, 20);	//seconds in 10 unit
+    		  sec1 = new Tiktok1(n, 40, 300);	//seconds in 10 unit
     		  background.add(sec1);
     	}
     }
@@ -310,7 +304,7 @@ public class Main extends Application {
     	fastcar2 = new Obstacle("file:src/media/car2.png", 300, 490, -6, 50);
     	background.add(fastcar);
 		background.add(fastcar2);
-		snake = new Snake("file:src/media/snake.png", 0, 440, -2, 50);
+		snake = new Obstacle("file:src/media/snake.png", 0, 440, -2, 50);
 		background.add(snake);
     }
     
@@ -330,7 +324,7 @@ public class Main extends Application {
     	lebel.incrA();
     	stopwatch();
     	background.remove(snake);
-    	snake1 = new Snake("file:src/media/snake.png", 300, 440, -2, 50);
+    	snake1 = new Obstacle("file:src/media/snake.png", 300, 440, -2, 50);
 		background.add(snake);
 		background.add(snake1);
     }

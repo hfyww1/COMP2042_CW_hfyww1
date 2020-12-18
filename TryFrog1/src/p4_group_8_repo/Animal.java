@@ -33,8 +33,8 @@ public class Animal extends Actor {
 	//df = death flip to flip images
 	double w = 800; //score limit
 	ArrayList<End> inter = new ArrayList<End>();
-	public Animal(String imageLink) {
-		setImage(new Image(imageLink, imgSize, imgSize, true, true));
+	public Animal() {
+		setImage(new Image("file:src/media/froggerUp.png", imgSize, imgSize, true, true));
 		setX(300);
 		setY(679.8+movement);
 		imgW1 = new Image("file:src/media/froggerUp.png", imgSize, imgSize, true, true);
@@ -285,7 +285,7 @@ public class Animal extends Actor {
 		}
 		
 		//if intersect with car, cardeath
-		if (getIntersectingObjects(Obstacle.class).size() >= 1 || getIntersectingObjects(Snake.class).size() >= 1) { //touching snake gives car death
+		if (getIntersectingObjects(Obstacle.class).size() >= 1) { //touching snake gives car death
 			carDeath = true;
 		}
 		//if (getX() == 240 && getY() == 82) {

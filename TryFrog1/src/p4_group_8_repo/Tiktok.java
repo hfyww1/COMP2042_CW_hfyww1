@@ -26,11 +26,11 @@ public class Tiktok extends Actor{
 		}
 	}
 	
-	public Tiktok(int size, int xpos, int ypos) {
+	public Tiktok(int size, int xpos) {
 		clock = new Image("file:src/media/clock.png", size, size, true, true);
 		setImage(clock);
 		setX(xpos);
-		setY(ypos);
+		setY(20);
 	}
 	
 	public void tock() {

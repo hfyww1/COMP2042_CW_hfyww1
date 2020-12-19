@@ -20,7 +20,7 @@ public class Log extends Actor {
 		speed = s;
 		
 	}
-	public boolean getLeft() {	//looks useless
+	public boolean getLeft() {	
 		return speed < 0;
 	}
 }

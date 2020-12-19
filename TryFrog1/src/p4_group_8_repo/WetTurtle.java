@@ -1,14 +1,17 @@
 package p4_group_8_repo;
 
 import javafx.scene.image.Image;
-
+/**
+ * WetTurtle class handles the sinking turtles
+ * @author  Wan Hanna Monisha binti Wan Nurnizam, 20052342
+ * @since   2020-12-18
+ */
 public class WetTurtle extends Actor{
 	Image turtle1;
 	Image turtle2;
 	Image turtle3;
 	Image turtle4;
 	private int speed;
-	//int i = 1;
 	boolean bool = true;
 	boolean sunk = false;
 	@Override

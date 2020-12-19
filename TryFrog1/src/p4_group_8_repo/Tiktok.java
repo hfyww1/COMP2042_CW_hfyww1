@@ -1,11 +1,20 @@
 package p4_group_8_repo;
 
 import javafx.scene.image.Image;	
-
+/**
+ * Tiktok class is the clock image that shows up, and collects the duration of the round
+ * @author  Wan Hanna Monisha binti Wan Nurnizam, 20052342
+ * @since   2020-12-18
+ */
 public class Tiktok extends Actor{
 	int passed = 0, check = 0;
 	long temp, temp1, dur;	//temp holds beginning and end, dur is duration in rough seconds
 	Image clock;
+	/**
+	 *The overrided method flips at ends of rounds to calculate duration of previous round
+	 *@param check is a check to collect the time count from 'now'
+	 *@param now stabilizing time counter
+	 */
 	@Override
 	public void act(long now) {
 		if(check == 0) {
@@ -33,11 +42,17 @@ public class Tiktok extends Actor{
 		setY(20);
 	}
 	
+	/**
+	 * This method calls to collect the 'now' count
+	 */
 	public void tock() {
-		check = 2;
-		//System.out.printf("tock check %d\n", temp);
+		check = 2;	//flips through what stores 'now'
 	}
-
+	
+	/**
+	 * Main calls this function to receive the duration of time
+	 * @return dur
+	 */
 	public long give() {
 		return dur;
 	}

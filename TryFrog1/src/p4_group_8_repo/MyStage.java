@@ -4,20 +4,17 @@ import java.io.File;
 
 import javafx.event.EventHandler;
 import javafx.scene.image.Image;
-//import javafx.scene.Scene;
-//import javafx.scene.control.Alert;
-//import javafx.scene.control.Alert.AlertType;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
-//import javafx.animation.AnimationTimer;
-//import javafx.util.Duration;
-//import javafx.scene.image.Image;
-
+/**
+ * MyStage handles the music
+ * @author  Wan Hanna Monisha binti Wan Nurnizam, 20052342
+ * @since   2020-12-18
+ */
 public class MyStage extends World{
 	MediaPlayer mediaPlayer;
-	//AnimationTimer timer;
 	public boolean press = false;
 	public boolean changeMute = false;
 	boolean start = false;
@@ -29,22 +26,9 @@ public class MyStage extends World{
 	}
 	
 	
-	public MyStage() {
-//		mediaPlayer.play();
-//		mediaPlayer.setOnEndOfMedia(new Runnable() {
-//
-//			@Override
-//			public void run() {
-//				mediaPlayer.seek(Duration.ZERO);
-//				
-//			}
-//			
-//		});
-//		mediaPlayer.play();
-		
+	public MyStage() {	//remove unused media parts
 		setOnKeyReleased(new EventHandler<KeyEvent>() {
 			public void handle(KeyEvent event) {
-				//if (!start) {
 				if (event.getCode() == KeyCode.M) {	
 					if(!changeMute) {
 						System.out.println("receive m");
@@ -68,33 +52,6 @@ public class MyStage extends World{
 	public boolean changeToUnmute() {
 		return true;
 	}
-	/*public void createTimer() {
-        timer = new AnimationTimer() {
-            @Override
-            public void handle(long now) {
-            	if (animal.changeScore()) {
-            		setNumber(animal.getPoints());
-            	}
-            	if (animal.getStop()) {
-            		System.out.print("STOPP:");
-            		background.stopMusic();
-            		stop();
-            		background.stop();
-            		Alert alert = new Alert(AlertType.INFORMATION);
-            		alert.setTitle("You Have Won The Game!");
-            		alert.setHeaderText("Your High Score: "+animal.getPoints()+"!");
-            		alert.setContentText("Highest Possible Score: 800");
-            		alert.show();
-            	}
-            }
-        };
-    }
-	
-	public void start() {
-		//background.playMusic();
-    	createTimer();
-        timer.start();
-    } */
 	
 	public void playMusic() {
 		String musicFile = "src/media/Frogger Main Song Theme (loop).mp3";   

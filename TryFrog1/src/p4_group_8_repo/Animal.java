@@ -1,13 +1,16 @@
 package p4_group_8_repo;
 
 import java.util.ArrayList;
-
 import javafx.event.EventHandler;
-
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 
+/**
+ * Animal class handles the players frog movement and interactions
+ * @author  Wan Hanna Monisha binti Wan Nurnizam, 20052342
+ * @since   2020-12-18
+ */
 
 public class Animal extends Actor {
 	Image imgW1;

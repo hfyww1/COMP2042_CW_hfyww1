@@ -42,7 +42,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		    start = new MyStage();
 		    Scene menu  = new Scene(start,600,800);
-		    Menu froggerStart = new Menu("file:src/media/StartScreen.png"); //add start screen background
+		    BackgroundImage froggerStart = new BackgroundImage("file:src/media/StartScreen.png"); //add start screen background
 			start.add(froggerStart);
 			primaryStage.setScene(menu);
 			primaryStage.show();
@@ -102,7 +102,7 @@ public class Main extends Application {
 						
 						fastcar = new Obstacle("file:src/media/car1Left.png", 0, 490, -5, 50);
 						background.add(fastcar);
-						background.add(new Digit(0, 30, 550, 45)); //change third digit to move score away from title, adjusted in 139
+						background.add(new Digit(0, 550)); //change third digit to move score away from title, adjusted in 139
 						
 						animal = new Animal();
 						background.add(animal);
@@ -251,7 +251,7 @@ public class Main extends Application {
  		   while ((i = hs.read()) != -1) {
  			   int char2int = (char)i - '0';	//change to integer
  			   System.out.println((char)i);
- 			   background.add(new Digit(char2int, 30, space, 45));
+ 			   background.add(new Digit(char2int, space));
  			   compareScore = (Math.pow(10, g)) * char2int;
  			   g--;	//sets single unit, tens unit, hundreds
  			   space = space+30;	//this prints in the units next to each other
@@ -259,7 +259,7 @@ public class Main extends Application {
  	   }
  	   catch(IOException e) {
  		   System.out.println("Error: cannot find .txt file");
- 		   background.add(new Digit(0, 30, space+20, 45));
+ 		   background.add(new Digit(0, space+20));
  	   }
     }
     
@@ -269,7 +269,7 @@ public class Main extends Application {
     		  int d = n / 10;
     		  int k = n - d * 10;
     		  n = d;
-    		  background.add(new Digit(k, 30, 550 - shift, 45));
+    		  background.add(new Digit(k, 550 - shift));
     		  shift+=30;
     		}
     }

@@ -19,7 +19,6 @@ public class Level extends Actor {
 		setImage(l1);
 		setX(270);
 		setY(750);
-		//speed = s;
 		
 		
 	}
@@ -27,23 +26,18 @@ public class Level extends Actor {
 		a++;
 		switch(a) {
 		case 1:
-			//System.out.printf("level 1 image set");
 			setImage(l1);
 			break;
 		case 2:
-			//System.out.printf("level 2 image set");
 			setImage(l2);
 			break;
 		case 3:
-			//System.out.printf("level 3 image set");
 			setImage(l3);
 			break;
 		case 4:
-			//System.out.printf("level 3 image set");
 			setImage(l4);
 			break;
 		case 5:
-			//System.out.printf("level 3 image set");
 			setImage(l5);
 			break;
 		}

@@ -1,13 +1,16 @@
 package p4_group_8_repo;
 
 import javafx.scene.image.Image;
-
+/**
+ * Turtle class shows the floating turtles
+ * @author  Wan Hanna Monisha binti Wan Nurnizam, 20052342
+ * @since   2020-12-18
+ */
 public class Turtle extends Actor{
 	Image turtle1;
 	Image turtle2;
 	Image turtle3;
 	private int speed;
-	//int i = 1;
 	boolean bool = true;
 	@Override
 	public void act(long now) {

@@ -4,16 +4,10 @@ import javafx.scene.image.ImageView;
 import java.util.ArrayList;
 
 /**
-* <h1>Actor Class</h1>
 * This class is used to set a constant style for the actors in frogger
-* This follows for vehicles, animals, logs
-* This is called in main to show the different actors and make them move and interact
-* <p>
-* 
-* @author  Wan Hanna Monisha binti Wan Nurnizam
+* @author  Wan Hanna Monisha binti Wan Nurnizam, 20052342
 * @since   2020-12-18
 */
-
 public abstract class Actor extends ImageView{
 
     public void move(double dx, double dy) {
@@ -43,8 +37,10 @@ public abstract class Actor extends ImageView{
         return someArray;
     }
     
-    //remove manageInput bc unused
-
+    /**
+    * Manage input is removed as it is unused and unnecessary
+    * @author  Wan Hanna Monisha binti Wan Nurnizam
+    */
     public abstract void act(long now);
     
 

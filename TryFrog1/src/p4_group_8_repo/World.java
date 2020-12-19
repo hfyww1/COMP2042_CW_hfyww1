@@ -3,7 +3,6 @@ package p4_group_8_repo;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import javafx.animation.AnimationTimer;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -11,11 +10,13 @@ import javafx.event.EventHandler;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyEvent;
-//import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
-//import javafx.scene.layout.StackPane;
 
-
+/**
+ * World class handles the creation and interaction of actors
+ * @author  Wan Hanna Monisha binti Wan Nurnizam, 20052342
+ * @since   2020-12-18
+ */
 public abstract class World extends Pane {
     private AnimationTimer timer;
     
@@ -79,12 +80,12 @@ public abstract class World extends Pane {
         };
     }
 
-    public void start() {	//called in main, can remove?
+    public void start() {	
     	createTimer();
         timer.start();
     }
 
-    public void stop() {	//called again in main? can remove?
+    public void stop() {
         timer.stop();
     }
     

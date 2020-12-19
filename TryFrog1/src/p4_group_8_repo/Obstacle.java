@@ -1,7 +1,11 @@
 package p4_group_8_repo;
 
 import javafx.scene.image.Image;
-
+/**
+ * Obstacle class shows the vehicles and snake
+ * @author  Wan Hanna Monisha binti Wan Nurnizam, 20052342
+ * @since   2020-12-18
+ */
 public class Obstacle extends Actor {	//these are vehicles
 	private int speed;
 	@Override

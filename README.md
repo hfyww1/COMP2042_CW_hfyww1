@@ -6,7 +6,7 @@ A template of the original arcade game Frogger was given with the assignment of 
 Needs JavaFX installed and a compiler, for this project Eclipse was used.
 
 ## Packages
-There are 
+There are 3 packages in the src folder that sorts the javacode (p4_group_8_repo), handles images and audio files (media), and the application folder.
 
 ## Modifications
 ### Visuals
@@ -30,3 +30,5 @@ The top of the game displays a clock and shows the time in seconds that it took 
 There were some redundant or unnecessary codes and functions in the original given code, for efficiency these areas were removed. The code was cleaned up by organizing the display and ordering the contents of methods. In some long codes, switch case statements were made for simplicity.
 
 ## Screenshots of Game
+![Startscreen](startscreen.png)
+![Gameplay](gameplay.png)

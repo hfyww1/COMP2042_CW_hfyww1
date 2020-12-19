@@ -30,5 +30,5 @@ The top of the game displays a clock and shows the time in seconds that it took 
 There were some redundant or unnecessary codes and functions in the original given code, for efficiency these areas were removed. The code was cleaned up by organizing the display and ordering the contents of methods. In some long codes, switch case statements were made for simplicity.
 
 ## Screenshots of Game
-![Startscreen](startscreen.png)
-![Gameplay](gameplay.png)
+![Startscreen](https://github.com/hfyww1/COMP2042_CW_hfyww1/blob/main/startscreen.PNG)
+![Gameplay](https://github.com/hfyww1/COMP2042_CW_hfyww1/blob/main/gameplay.PNG)
